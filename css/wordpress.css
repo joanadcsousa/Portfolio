@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: 'Racing Sans One', cursive;
+  font-family: 'Montserrat', sans-serif;
+  /* opcional */
+  
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--escuro);
+  background-color: var(--claro);
+
+}
+
+
+
+
+
+
+/*Custom Properties - facil acceso a los colores*/
+:root{
+    --rosa: #f9d9fc;
+    --rojo: #fe2d43;
+    --claro: #f5f5f5;
+    --escuro:#3d3e3d;
+    --blanco: #ffffff;
+
+}
+
+
+
+
+
+/*HEADER*/
+.Header{
+    background-color: var(--rosa);
+    width: 100%;
+
+    padding: 1rem 0;
+    
+    color: var(--rojo);
+    border-radius: 0 0 2rem 2rem;
+  
+}
+.Header-wrapper{
+    width: 95%;
+
+    margin: auto; /*para que el bloque este centrado*/
+
+    padding: 1rem;
+ 
+
+}
+
+.Header-logo{}
+
+/*NAV*/
+.Header-nav{}
+.Header-ul{
+  width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 2rem;
+}
+.Header-a{
+    border: solid var(--rojo) .125rem;
+
+    border-radius: 2rem;
+
+    padding: .5rem 1rem;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1rem;
+  }
+
+.Header-a:hover{
+    background-color: var(--rojo);
+    color: var(--rosa);
+    transition: all .5s ease;
+}
+
+.Header-a:active{
+  transform: scale(0.8);
+  transition: all .5s ease;
+}
+.Header-svg{
+  display: none;
+}
+
+
+/*MAIN*/
+.Main{}
+.Wordpress{
+    margin: 6rem 0;
+    background-color: var(--claro);
+    width: 100%;
+}
+.Wordpress-wrapper{
+    width: 90%;
+    margin: auto;
+}
+.Wordpress-hero{
+    margin: 10rem 0;
+}
+.Hero-h2{
+    font-size: 8rem;
+    line-height: 6rem;
+    font-family: 'Racing Sans One', cursive;
+
+}
+.Hero-p{
+    padding: 4rem 0 0 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+.Wordpress-grid{
+    display: grid;
+    grid-template-columns: repeat( 2 , 1fr );
+    grid-template-rows: repeat( 3 , 1fr ) ;
+
+    gap: 1rem;
+
+    margin: auto;
+    padding: 6rem 0;
+}
+.Grid-moodboard{
+    max-width: 30rem;
+}
+.Moodboard-h2{
+    font-size: 2rem;
+    font-family: 'Racing Sans One', cursive;
+}
+.Moodboard-ul{
+    padding: 1rem 0;
+}
+.Moodboard-li{
+    padding: .5rem 0;
+}
+
+.Moodboard{}
+.Moodboard-img{
+    background-color: aqua;
+    width: 31.25rem;
+    height: 18.75rem;
+}
+
+.Competitive{}
+.Competitive-img{
+    background-color: aqua;
+    width: 21.875rem;
+}
+
+.Grid-competitive{
+    max-width: 30rem;
+}
+.Competitive-h2{
+    font-size: 2rem;
+    font-family: 'Racing Sans One', cursive;
+}
+.Competitive-ul{
+    padding: 1rem 0;
+}
+.Competitive-li{
+    padding: .5rem 0;
+}
+
+.Grid-identity{
+    max-width: 30rem;
+}
+.Identity-h2{
+    font-size: 2rem;
+    font-family: 'Racing Sans One', cursive;
+}
+.Identity-p{
+    padding: 1rem 0;
+}
+
+.Identity-colors{
+    margin: 3rem 0;
+    max-width: 20rem;
+}
+.Identity-naranja{
+    background-color:#FE755D;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.Identity-span{
+    color: var(--claro);
+}
+.Identity-morado{
+    background-color:#D077E4;
+    padding: 1rem;
+    border-radius: 1rem; 
+}
+.Identity-blanco{
+    background-color:#EDEDE9;
+    padding: 1rem;
+    border-radius: 1rem; 
+}
+.Identity-bege{
+    background-color:#CEC2B6;
+    padding: 1rem;
+    border-radius: 1rem; 
+}
+.Identity-preto{
+    background-color:#383E40;
+    padding: 1rem;
+    border-radius: 1rem; 
+}
+
+.Wordpress-fotos{
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.Fotos-img{
+    width: 40rem;
+    height: 282px;
+    background-color: #fe2d43;
+    object-fit: cover;
+}
+
+.Next-a{
+    text-align: center;
+    font-weight: 600;
+    border: solid .125rem var(--rojo) ;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    width: 12rem;
+    margin:auto;
+    color: var(--rojo);
+}
+.Next-a:hover{
+    background-color: var(--rojo);
+    color: var(--rosa);
+    transition: all .5s ease;
+}
+.Next-a:active{
+    transform: scale(0.8);
+    transition: all .5s ease;
+}
+
+
+/*FOOTER*/
+.Footer{
+    width: 100%;
+  }
+  .Footer-container{
+    width: 100%;
+    margin: auto;
+  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  
+    padding: 2rem 0;
+  }
+  .Footer-social{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Social-ul{
+    padding: 2rem 0;
+  }
+  .Social-li{
+    color: var(--escuro);
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2rem;
+  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  
+    gap: .5rem;
+  
+    padding: 2rem 0;
+  }
+  .Social-li::before{
+    content: "";
+    width: 15rem;
+    height: .125rem;
+    background-color: var(--escuro);
+  }
+  .Social-li:hover{
+    color: var(--rojo);
+    transition: all .5s ease;
+  }
+  .Footer-p{
+    padding: 4rem;
+    color: var(--rosa);
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2rem;
+  
+  }
+  .Footer-a{
+    color: var(--rosa);
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+  
+    background-color: var(--rojo);
+    padding: .3rem 1rem;
+    border-radius: 2rem;
+  
+    margin-right: 2rem;
+  }
+  .Footer-a:hover{
+      background-color: var(--rosa);
+      color: var(--rojo);
+      transition: all .5s ease;
+  }
+  .Footer-a:active{
+    transform: scale(0.8);
+    transition: all .5s ease;
+  }
+  
+  
+
+
+
+
+
+  

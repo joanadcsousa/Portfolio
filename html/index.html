@@ -25,8 +25,8 @@
                 <ul class="Header-ul">
                     <li><a class="Header-a" href="#Home">Home</a></li>
                     <li><a class="Header-a" href="#Work">Work</a></li>
-                    <li><a class="Header-a" href="#Aboutme">About me</a></li>
-                    <li><a class="Header-a" href="">Contactos</a></li>
+                    <li><a class="Header-a" href="#About">About</a></li>
+                    <li><a class="Header-a" href="#Contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -37,19 +37,25 @@
     </header>
 
 
-<!--HERO-->
+<!--MAIN-->
+    <main class="Main">
+
+    <!--HERO-->
 
     <div class="Hero">
-    
+        
+        <div class="Hero-fondo">
         <section class="Hero-wrapper">
 
-        <h1 class="Hero-h1">Get the creative juices flowing</h1>
-
         <div class="Hero-container">
-        <p class="Hero-p">Una marketer dedicada al SEO, gestión de redes sociales y diseño web.</p>
+            <h1 class="Hero-h1">Get the creative juices flowing</h1>
+            <span class="Hero-span">with Joana</span>
         </div>
 
+        <p class="Hero-p">a marketer dedicated to SEO, social media and web design</p>
+
         </section>
+        </div>
     </div>
     
 
@@ -100,8 +106,8 @@
                 </li>
                 <li class="Fotos-li">
                     <a class="Fotos-a" href="">
-                        <img class="Work-img opacity" id="tiktok" src="../assets/img/Tiktokrosa.png" alt="fototiktoks" loading="lazy"> 
-                        <img class="Work-img" src="../assets/img/Tiktokbranco.png" alt="fototiktoks" loading="lazy">
+                        <img class="Work-img" id="tiktok" src="../assets/img/Tiktokrosa.png" alt="fototiktoks" loading="lazy"> 
+                        <img class="Work-img opacity" src="../assets/img/Tiktokbranco.png" alt="fototiktoks" loading="lazy">
                     </a>
                     </li>
                 </ul>
@@ -112,11 +118,11 @@
         </div>
 
 
- <!--About me-->
-        <div id="Aboutme">
+ <!--About-->
+        <div id="About">
 
             <section class="About-title">
-                <h2 class="About-h2">About me</h2>
+                <h2 class="About-h2">About</h2>
             </section>
 
             <div class="About-wrapper"><!--Wrapper de la primera sección del About con display-flex-->               
@@ -144,7 +150,7 @@
 
 <div class="About-tabs left">
 
-        <div class="About-experience">
+        <section class="About-experience">
             <h3 class="Experience-h3">Experience</h3>
         
             <div class="Experience-work">
@@ -165,8 +171,9 @@
                  <li class="Experience-li">Email marketing.</li>
              </ul>
          </div>
-        </div>
-        <div class="About-studies">
+        </section>
+
+        <section class="About-studies">
             <h3 class="Studies-h3">Studies</h3>
         
             <div class="Experience-studies">
@@ -188,10 +195,10 @@
                     <li class="Experience-li">Email marketing.</li>
                 </ul>
             </div>
-        </div>
+        </section>
 
 
-         <div class="About-skills">
+         <section class="About-skills">
             <h3 class="Skills-h3">Skills</h3>
         
             <div class="Experience-skills">
@@ -213,14 +220,14 @@
                     <li class="Experience-li">Email marketing.</li>
                 </ul>
             </div>
-        </div>
+        </section>
         
     </div>
 
 
 <div class="About-tabs right">
 
-        <div class="About-language">
+        <section class="About-language">
             <h3 class="Language-h3">Languages</h3>
 
             <ul class="Language-ul">
@@ -234,26 +241,16 @@
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                   </svg>Spanish B2</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="About-interest">
-            <h3 class="Interest-h3">Interests</h3>
-            <ul class="Interest-ul">
-                <li class="Interest-li">🐈‍⬛</li>
-                <li class="Interest-li">🌿</li>
-                <li class="Interest-li">🧘‍♀️</li>
-                <li class="Interest-li">✍️</li>
-            </ul>
 
-        </div>
-
-        <div class="About-curriculo">
-            <span class="Curriculo-span">CVs</span>
+        <section class="About-curriculo">
+            <h3 class="Curriculo-h3">CVs</h3>
                 <div class="Curriculo-btn">
-                        <a href="../assets/pdf/CV_Joana.sousa.es.pdf" class="Curriculo-a" downloadtittle="Download">Spanish CV</a>
-                        <a href="../assets/pdf/CV_Joana.sousa.ing.pdf" class="Curriculo-a" download tittle="Download">English CV</a>
+                        <a href="../assets/pdf/CV_Joana.sousa.es.pdf" class="Curriculo-a" target="_blank">Spanish CV</a>
+                        <a href="../assets/pdf/CV_Joana.sousa.ing.pdf" class="Curriculo-a" target="_blank">English CV</a>
                 </div>
-        </div>
+            </section>
 </div>
 </div>
 
@@ -266,48 +263,50 @@
 
         
 
-    <!--Contact-->
-    <div class="Contact">
+    <!--CONTACT FORM-->
+
+    <div id="Contact">
         <div class="Contact-wrapper">
+
             <div class="Contact-container">
 
                 <section class="Contact-title">
-                    <h2 class="Contact-h2">Leave me a message :)</h2>
+                    <h2 class="Contact-h2">Wanna know more<br>about me??</h2>
                 </section>
 
                 <div class="Contact-form">
                     <form action="archivo.php" method="post">
-                        <input type="email" placeholder="E-mail">
-                        <textarea name="Message" placeholder="Message" id="" cols="30" rows="10"></textarea>
-                        <input type="submit">
+                        <input type="email" class="Form-email" placeholder="E-mail">
+                        <textarea name="Message" class="Form-text" placeholder="Message" id="" cols="20" rows="3"></textarea>
                     </form>
+                    <svg class="Contact-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
                 </div>
             </div>
+
+            <a class="Contact-a" href="mailto:joana.sousa234@hotmail.com"> or here: joana.sousa234@hotmail.com</a>
         </div>
     </div>
 
+</main>
 
 
-    <!--Footer-->
+    <!--FOOTER-->
 
     <footer class="Footer">
-        <div class="Footer-wrapper">
-            <div class="Footer-nav">
-                <ul class="Footer-ul">
-                    <li><a class="Footer-a" href="">Home</a></li>
-
+        <div class="Footer-container">
+            <div class="Footer-social">
+                <ul class="Social-ul">
+                    <li class="Social-li"><a href="https://www.behance.net/joanasousa_marketing" target="_blank">Behance</a></li>
+                    <li class="Social-li"><a href="https://www.linkedin.com/in/joana-sousa-marketing/" target="_blank">Linked-in</a></li>
                 </ul>
             </div>
-
-            <div class="Footer-quote">
-
-            </div>
-
-            <div class="Footer-credits">
-                por feito por joana, redes sociais e 
-                Go up            
-            </div>
+            <p class="Footer-p">By Joana © 2023</p>
+            <a class="Footer-a" href="#Home">Go up</a>
         </div>
+
     </footer>
+
 </body>
 </html>
