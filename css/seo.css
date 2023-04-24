@@ -153,8 +153,6 @@ body {
     margin: auto; /*para que el bloque este centrado*/
 
     padding: 1rem;
- 
-
 }
 
 .Header-logo{}
@@ -179,7 +177,7 @@ body {
     padding: .5rem 1rem;
     font-family: 'Racing Sans One', cursive;
     font-size: 1rem;
-  }
+}
 
 .Header-a:hover{
     background-color: var(--rojo);
@@ -197,17 +195,20 @@ body {
 
 
 /*MAIN*/
+
 .Main{}
-.Wordpress{
+.Seo{
     margin: 6rem 0;
     background-color: var(--claro);
     width: 100%;
 }
-.Wordpress-wrapper{
+.Seo-wrapper{
     width: 80%;
     margin: auto;
 }
-.Wordpress-hero{
+
+/*HERO*/
+.Seo-hero{   
     margin: 10rem 0;
 }
 .Hero-h2{
@@ -215,7 +216,6 @@ body {
     font-size: 8rem;
     line-height: 6rem;
     font-family: 'Racing Sans One', cursive;
-
 }
 .Hero-p{
     padding: 4rem 0 0 0;
@@ -223,131 +223,135 @@ body {
     font-size: 1.5rem;
 }
 
-
-.Wordpress-grid{
+/*GRID EXPLICANDO EL PROYECTO*/
+.Seo-grid{
     display: grid;
-    grid-template-columns: repeat( 2 , 1fr );
-    grid-template-rows: repeat( 3 , 1fr ) ;
-
-    gap: 1rem;
+    grid-template-columns: repeat( 2 , 1fr);
+    grid-template-rows: repeat( 2 , 1fr);
 
     margin: auto;
     padding: 6rem 0;
+    gap: 1rem;
 }
-.Grid-moodboard{
-    max-width: 30rem;
-}
-.Moodboard-h2{
+
+
+.Seo-selectra{}
+.Selectra-h2{
     font-size: 2rem;
     font-family: 'Racing Sans One', cursive;
 }
-.Moodboard-ul{
+.Selectra-p{
     padding: 1rem 0;
-}
-.Moodboard-li{
-    padding: .5rem 0;
+    max-width: 30rem;
 }
 
-.Moodboard{}
-.Moodboard-img{
-    background-color: aqua;
+.Seo-foto{}
+.Seo-img{
     width: 31.25rem;
-    height: 18.75rem;
-}
-
-.Competitive{}
-.Competitive-img{
-    background-color: aqua;
-    width: 21.875rem;
-}
-
-.Grid-competitive{
-    max-width: 30rem;
-}
-.Competitive-h2{
-    font-size: 2rem;
-    font-family: 'Racing Sans One', cursive;
-}
-.Competitive-ul{
-    padding: 1rem 0;
-}
-.Competitive-li{
-    padding: .5rem 0;
-}
-
-.Grid-identity{
-    max-width: 30rem;
-}
-.Identity-h2{
-    font-size: 2rem;
-    font-family: 'Racing Sans One', cursive;
-}
-.Identity-p{
-    padding: 1rem 0;
-}
-
-.Identity-colors{
-    margin: 3rem 0;
-    max-width: 20rem;
-}
-.Identity-naranja{
-    background-color:#FE755D;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-.Identity-span{
-    color: var(--claro);
-}
-.Identity-morado{
-    background-color:#D077E4;
-    padding: 1rem;
-    border-radius: 1rem; 
-}
-.Identity-blanco{
-    background-color:#EDEDE9;
-    padding: 1rem;
-    border-radius: 1rem; 
-}
-.Identity-bege{
-    background-color:#CEC2B6;
-    padding: 1rem;
-    border-radius: 1rem; 
-}
-.Identity-preto{
-    background-color:#383E40;
-    padding: 1rem;
-    border-radius: 1rem; 
-}
-
-.Wordpress-fotos{
-    padding: 1rem;
-    border-radius: 2rem;
-}
-.Fotos-img{
-    width: 40rem;
-    height: 282px;
-    background-color: #fe2d43;
     object-fit: cover;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.Seo-img:hover{
+    border: solid 2px var(--rosa);
 }
 
+.Seo-spiritu{
+    padding-top: 2rem;
+}
+.Spiritu-h2{
+    font-size: 2rem;
+    font-family: 'Racing Sans One', cursive;
+}
+.Spiritu-p{
+    padding: 1rem 0;
+    max-width: 30rem;
+}
+
+.spiritu{ /*para que el padding solo afecte al segundo .Seo-foto*/
+    padding-top: 2rem;
+}
+
+
+.Lightbox{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--escuro);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: fixed;
+    top:0;
+    left:0;
+
+    gap: 2rem;
+    padding: 2rem 0;
+
+    opacity: 0; /*para cuando el lightbox esta inactivo no aparezca*/
+    pointer-events: none; /*la opacidad no elimina el elemento, por eso seguiria siendo clicável*/
+}
+
+.Lightbox.isActive{
+    opacity: 1;
+    pointer-events: auto;
+}
+.Lightbox-img{
+    width: 45rem;
+    object-fit: contain; /*para que la imagen no deforme y ocupe todo el espacio*/
+}
+.Lightbox-btn{
+    color: var(--rosa);
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+  
+    background-color: var(--rojo);
+    padding: .3rem 1rem;
+    border-radius: 2rem;
+    margin-left: 1rem;
+}
+.Lightbox-btn:hover{
+    background-color: var(--rosa);
+    color: var(--rojo);
+    transition: all .5s ease;
+}
+.Lightbox-btn:active{
+  transform: scale(0.8);
+  transition: all .5s ease;
+}
 
 
 /*NAV PROYECTOS SEGUIENTES*/
 .Work-menu{}
 .Work-title{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--rojo);
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
-.Work-ul{}
+.Work-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 50rem;
+    margin: auto;
+}
+.Work-li{}
 .Work-a{
   text-align: center;
   font-weight: 600;
-  border: solid .125rem var(--rojo) ;
+  font-size: .75rem;
+
+  border: solid .125rem var(--rojo);
   border-radius: 2rem;
   padding: .5rem 1rem;
-  width: 12rem;
+  min-width: 5rem; /*ancho minimo para que todos se adapten dentro de esa medida. Cómo instagram posts era más largo no estaba igual a los demás*/
+
   color: var(--rojo);
 }
 .Work-a:hover{
@@ -363,11 +367,12 @@ body {
 
 
 
+
 /*FOOTER*/
 .Footer{
     width: 100%;
   }
-  .Footer-container{
+.Footer-container{
     width: 100%;
     margin: auto;
   
