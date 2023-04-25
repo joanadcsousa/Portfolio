@@ -12,7 +12,11 @@ console.log(experienceUl)
 experienceTitle.forEach((eachTitle,i)=>{
     experienceTitle[i].addEventListener('click',()=>{
 
-            experienceUl[i].classList.toggle('isActive')
+            experienceUl.forEach((eachUl,j)=>{
+            experienceUl[j].classList.remove('isActive')
+            })
+
+            experienceUl[i].classList.add('isActive')
 
         })
     })

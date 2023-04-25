@@ -221,6 +221,8 @@ body {
     padding: 4rem 0 0 0;
     font-weight: 600;
     font-size: 1.5rem;
+
+    max-width: 50%;
 }
 
 
@@ -318,36 +320,52 @@ body {
     padding: 1rem;
     border-radius: 1rem; 
 }
-
-.Wordpress-fotos{
+.Galeria-grid{
+  padding-bottom: 6rem;
+  display: grid;
+  grid-template-columns: repeat( 2 , 1fr);
+  grid-template-rows: repeat( 2 , 1fr);
+}
+.Galeria-fotos{
     padding: 1rem;
     border-radius: 2rem;
 }
 .Fotos-img{
     width: 40rem;
-    height: 282px;
-    background-color: #fe2d43;
-    object-fit: cover;
+    object-fit:contain;
 }
+
 
 
 
 /*NAV PROYECTOS SEGUIENTES*/
 .Work-menu{}
 .Work-title{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--rojo);
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
-.Work-ul{}
+.Work-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 50rem;
+    margin: auto;
+}
+.Work-li{}
 .Work-a{
   text-align: center;
   font-weight: 600;
-  border: solid .125rem var(--rojo) ;
+  font-size: .75rem;
+
+  border: solid .125rem var(--rojo);
   border-radius: 2rem;
   padding: .5rem 1rem;
-  width: 12rem;
+  min-width: 5rem; /*ancho minimo para que todos se adapten dentro de esa medida. Cómo instagram posts era más largo no estaba igual a los demás*/
+
   color: var(--rojo);
 }
 .Work-a:hover{
@@ -359,7 +377,6 @@ body {
     transform: scale(0.8);
     transition: all .5s ease;
 }
-
 
 
 

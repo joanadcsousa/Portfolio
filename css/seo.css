@@ -221,6 +221,7 @@ body {
     padding: 4rem 0 0 0;
     font-weight: 600;
     font-size: 1.5rem;
+    max-width: 55%;
 }
 
 /*GRID EXPLICANDO EL PROYECTO*/
