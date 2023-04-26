@@ -98,6 +98,7 @@ svg {
   display: inline;
   width: initial;
 } */
+
 /* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
@@ -156,6 +157,7 @@ body {
 }
 
 .Header-logo{}
+
 
 /*NAV*/
 .Header-nav{}
@@ -252,9 +254,12 @@ body {
     object-fit: cover;
     border-radius: 1rem;
     cursor: pointer;
+
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
 }
 .Seo-img:hover{
-    border: solid 2px var(--rosa);
 }
 
 .Seo-spiritu{
