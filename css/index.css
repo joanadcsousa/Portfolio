@@ -335,6 +335,26 @@ transition: all .5s ease;
 }
 
 
+/*----WORK FOTOS----*/
+
+.Work-fotos{
+  position: relative;
+}
+.Work-click{
+  width: 100%;
+}
+
+.Click-img{
+  object-fit: contain ;
+  width: 6.25rem;
+  animation: clickrotate 5s linear infinite 4s;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
+}
 
 .Fotos-ul{
   overflow: hidden; 
@@ -366,33 +386,33 @@ transition: all .5s ease;
 }
 
 
-/*.Fotos-texto{
+.Fotos-texto{
   background-color: var(--claro);
   color: var(--escuro);
 
-  opacity: 0;
   width: 100%;
   height: 100%;
-
+  
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  
+  border-radius: 1rem;
+  pointer-events: none;
 
   position: absolute;
   top:0;
   left:0;
-
-  border-radius: 1rem;
-  pointer-events: none;
+  
+  opacity: 0;
 }
 
-.Fotos-texto:hover.view{ /*Al hacer hover en Fotos-texto, la segunda imagen (que tiene la clase opacity y esta en absolute) aparece. O sea, deja de tener opacity: 0 para tener opacity: 1.
+.Fotos-texto:hover.view{ /*Al hacer hover en Fotos-texto, la segunda imagen (que tiene la clase opacity y esta en absolute) aparece. O sea, deja de tener opacity: 0 para tener opacity: 1.*/
   opacity: 70%;
-  transition: all .5s ease 1s;
+  transition: all .5s ease;
   z-index: 1;
 }
-
 
 .Fotos-h3{
   font-size: 2rem;
@@ -400,7 +420,7 @@ transition: all .5s ease;
 }
 .Fotos-p{
   font-size: 1.5rem;
-}*/
+}
 
 
 
@@ -486,7 +506,7 @@ transition: all .5s ease;
   padding: 0.5rem 1rem;
 }
 .About-texto{
-  width: 40%;
+  max-width: 35rem; /*Para que el contenido no se extenda cuando la pantalla se hace más ancha*/
 
   background-color: var(--rosa);
   border-radius: 2rem;
@@ -663,7 +683,7 @@ transition: all .5s ease;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 0 0 0;
 
   gap: 1rem;
 }
@@ -697,7 +717,7 @@ transition: all .5s ease;
 }
 
 .Contact-wrapper{
-  padding: 4rem 0 8rem 0;
+  padding: 4rem 0 8rem 3rem;
   background-color: var(--rosa);
   border-radius: 2rem;
 
@@ -817,7 +837,7 @@ transition: all .5s ease;
 }
 .Social-li::before{
   content: "";
-  width: 15rem;
+  width: 14.5rem;
   height: .125rem;
   background-color: var(--escuro);
 }
@@ -882,6 +902,13 @@ transition: all .5s ease;
   }
 }
 
+/* El código anterior define una animación CSS usando la regla `@keyframes`. La animación se llama
+`clickrotate`. Gira un elemento 360 grados cuando alcanza el 30% de su duración de animación. */
+@keyframes clickrotate{
+  50% {transform: rotate(-45deg);
+  }
+}
+
 
 
 
@@ -889,7 +916,26 @@ transition: all .5s ease;
 
 /*-----RESPOSIVE-----*/
 
-@media screen and (max-width:480px){
+@media screen and (max-width:600px){
+
+  .About-nombre{
+    font-size: 2rem;
+  }
+
+  .About-presentacion{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .About-foto{
+    padding: 1rem 0;
+  }
+  
+}  
+
+
+@media screen and (max-width:960px){
   .Header-nav{
     display: none;
   }
@@ -897,7 +943,6 @@ transition: all .5s ease;
     display: block;
     width: 2.5rem;
     height: 2.5rem;
-    /*não me lembro como se fazia o botão do menu, era em javascript ne*/
   }
   .Work-contenedor{  
     display: flex;
@@ -916,15 +961,6 @@ transition: all .5s ease;
     max-width: 80%;
   }
 
-  .About-presentacion{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .About-foto{
-    padding: 1rem 0;
-  }
   .About-texto{
     padding: 2rem 1.5rem;
 
@@ -941,8 +977,6 @@ transition: all .5s ease;
     align-items: center;
   }
   
-  .Experience-work{}
-
   .Experience-ul.isActive{
     height: 16rem;
   }
@@ -974,11 +1008,7 @@ transition: all .5s ease;
     padding: 3rem;
     max-width: 81.25rem;
   }
-  
-  
-}  
-
-
+}
 
 
 @media screen and (max-width:1024px){
@@ -986,6 +1016,21 @@ transition: all .5s ease;
     font-size: 1rem;
     gap: 1rem;
   } 
+  .Hero-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .Hero-h1{
+    font-size: 5.4375rem;
+  }
+  .Hero-p{
+    padding: 0;
+  }
+  .Hero-span{
+    padding: 1rem 0;
+  }
   .About-foto{
     display: flex;
     flex-flow: column wrap;
@@ -1001,12 +1046,41 @@ transition: all .5s ease;
   .About-a{
     width: 10rem;
   }
-  
   .Curriculo-btn{
     display:flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+  .Contact-wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .Contact-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 3rem 0 0 0;
+  }
+  .Contact-a{
+    padding:2rem 0;
+  }
+  
+  .Footer-container{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .Footer-p{
+    padding: 0 0 4rem 2rem;
+  }
+  .Footer-a{
+    margin: 0 0 0 2rem;
   }
 }
 
