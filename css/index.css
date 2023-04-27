@@ -932,7 +932,7 @@ transition: all .5s ease;
     padding: 1rem 0;
   }
   
-}  
+}
 
 
 @media screen and (max-width:960px){
@@ -1016,12 +1016,6 @@ transition: all .5s ease;
     font-size: 1rem;
     gap: 1rem;
   } 
-  .Hero-container{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
   .Hero-h1{
     font-size: 5.4375rem;
   }
@@ -1084,3 +1078,11 @@ transition: all .5s ease;
   }
 }
 
+@media screen and (max-width:1150px){
+  .Hero-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

@@ -175,6 +175,8 @@ body {
     border: solid var(--rojo) .125rem;
 
     border-radius: 2rem;
+    min-width: 6rem; /*para que tengan el mismo ancho*/
+    text-align: center;
 
     padding: .5rem 1rem;
     font-family: 'Racing Sans One', cursive;
@@ -220,7 +222,7 @@ body {
 .Hero-p{
     padding: 4rem 0 0 0;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     max-width: 50%;
 }
@@ -231,7 +233,7 @@ body {
     grid-template-columns: repeat( 2 , 1fr );
     grid-template-rows: repeat( 3 , 1fr ) ;
 
-    gap: 1rem;
+    gap: 2rem;
 
     margin: auto;
     padding: 6rem 0;
@@ -244,23 +246,25 @@ body {
     font-family: 'Racing Sans One', cursive;
 }
 .Moodboard-ul{
-    padding: 1rem 0;
+  padding: 1rem 1.5rem 0 0;
 }
 .Moodboard-li{
     padding: .5rem 0;
 }
 
 .Moodboard{}
+
 .Moodboard-img{
-    background-color: aqua;
-    width: 31.25rem;
-    height: 18.75rem;
+    width: 100%;
+
+    object-fit: contain;  /*propiedad para especificar cómo se debe cambiar el tamaño de la imagen para que se ajuste a las dimensiones del elemento. La imagen se escalará para ajustarse a las
+    dimensiones del elemento y cualquier espacio sobrante se rellenará con píxeles transparentes.*/
 }
 
 .Competitive{}
 .Competitive-img{
-    background-color: aqua;
-    width: 21.875rem;
+    width: 100%;
+    object-fit: contain;
 }
 
 .Grid-competitive{
@@ -271,7 +275,7 @@ body {
     font-family: 'Racing Sans One', cursive;
 }
 .Competitive-ul{
-    padding: 1rem 0;
+  padding: 1rem 1.5rem 0 0;
 }
 .Competitive-li{
     padding: .5rem 0;
@@ -285,11 +289,11 @@ body {
     font-family: 'Racing Sans One', cursive;
 }
 .Identity-p{
-    padding: 1rem 0;
+    padding: 1rem 1.5rem 0 0;
 }
 
 .Identity-colors{
-    margin: 3rem 0;
+    margin: 2rem 0;
     max-width: 20rem;
 }
 .Identity-naranja{
@@ -364,7 +368,8 @@ body {
   border: solid .125rem var(--rojo);
   border-radius: 2rem;
   padding: .5rem 1rem;
-  min-width: 5rem; /*ancho minimo para que todos se adapten dentro de esa medida. Cómo instagram posts era más largo no estaba igual a los demás*/
+
+  min-width: 8rem; /*ancho minimo para que todos tengan la misma medida*/
 
   color: var(--rojo);
 }
@@ -463,4 +468,135 @@ body {
 
 
 
+
+  /*-------RESPOSIVE-------*/
+
+
+@media screen and (max-width:1024px){
+  .Header-ul{
+    font-size: 1rem;
+    gap: 1rem;
+  } 
+
+  .Hero-h2{
+    font-size: 7rem;
+  }
+  .Hero-p{
+   max-width: 70%;
+  }
+
+  .Wordpress-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat( 6 , 1fr );
+
+    padding: 2rem 0;
+    max-height: 325vh; /*Para controlar la distancia entre los divs de la grid*/
+    gap: 1rem;
+
+}
+.Grid-moodboard{
+  max-width: 45rem;
+}
+.Grid-competitive{
+  max-width: 45rem;
+}
+.Grid-identity{
+  max-width: 45rem;
+}
+.Competitive-h2{ 
+  padding: 3rem 0 0 0;
+}
+.Identity-h2{
+  padding: 3rem 0 0 0;
+}
+.Identity-colors{
+  margin: 0;
+}
+
+.Galeria-grid{
+  padding-bottom: 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat( 4 , 1fr);
+}
+.Galeria-fotos{
+  margin: auto;
+}
+
+  .Footer-container{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .Footer-p{
+    padding: 0 0 4rem 2rem;
+  }
+  .Footer-a{
+    margin: 0 0 0 2rem;
+  }
+}
+
+
+
+@media screen and (max-width:960px){
   
+  .Hero-h2{
+    font-size: 12vw; /*para que el texto de adapte al ancho del dispositivo. No es usado antes porque seria muy grande*/
+    line-height: 5rem;
+}
+  .Work-ul{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap:1rem;
+  }
+ 
+}
+
+
+  
+@media screen and (max-width:480px){
+
+  .Header-svg{  /*Para hacer el menu responsive, el svg de hamburguesa cambia de display none a block*/
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .Header-ul{ 
+    display: none;
+  }
+
+  .Header-ul.isActive{/*Para hacer el menu responsive, el nav solo aparece cuando se añade la clase isActive con Javascript*/
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+  
+      gap: 1rem;
+  }
+
+.Wordpress-hero{
+    margin: 8rem 0;
+}
+
+  .Hero-p{
+     max-width: 100%;
+  }
+  .Wordpress-grid{
+    max-height: 250vh; /*Para disminuir los espacios entre los divs de la grid*/
+  }
+  .Galeria-grid{
+    padding: 6rem 0; /*Para separarse más de la wordpress-grid*/
+  }
+  .Identity-colors{
+    padding-top: 3rem;
+  }
+  }
+
+
+    
