@@ -376,11 +376,12 @@ body {
 .Work-a:hover{
     background-color: var(--rojo);
     color: var(--rosa);
-    transition: all .5s ease;
+    transition: all .5s ease; /*Al hacer hover sobre el botón, el cambio de color se producirá de forma suave durante 0,5 segundos.*/
+
 }
 .Work-a:active{
     transform: scale(0.8);
-    transition: all .5s ease;
+    transition: all .5s ease; /*Al hacer clic sobre el botón, este disminui y crece un poco para que el usuario sepa que el clic funcionó*/
 }
 
 
@@ -556,6 +557,7 @@ body {
   }
  
 }
+
 
 
   

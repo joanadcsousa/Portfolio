@@ -1,4 +1,23 @@
 
+//---------MENU RESPONSIVE   
+
+//Cuando clic en .Header-svg
+//Al .Header-ul se añade la clase isActive 
+
+
+const headerSvg = document.querySelector('.Header-svg')
+const headerUl = document.querySelector('.Header-ul')
+
+console.log(headerUl)
+
+headerSvg.addEventListener('click',()=>{
+    headerUl.classList.toggle('isActive')
+})
+
+
+
+//---------BOTONES ABOUT
+
 //Cuando hago click en un .Experience-title
 // removo la clase isActive a todos los .Experience-ul
 // añado la clase isActive al .Experience-ul
@@ -21,6 +40,3 @@ experienceTitle.forEach((eachTitle,i)=>{
         })
     })
 
-
-//Cuando hago mousehover en .Fotos-li
-//

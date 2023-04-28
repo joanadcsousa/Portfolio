@@ -200,212 +200,64 @@ body {
 
 /*MAIN*/
 
-.Main{}
-.Seo{
+.Main{
+  min-height: 75vh; /*Para que la página en grandes pantallas llegue hacia abajo*/
+}
+.Tiktok{
     margin: 6rem 0;
     background-color: var(--claro);
     width: 100%;
 }
-.Seo-wrapper{
+.Tiktok-wrapper{
     width: 80%;
     margin: auto;
+
+    max-width: 150rem; /*Para no estirar el contenido en grandes pantallas*/
 }
 
 /*HERO*/
-.Seo-hero{   
+.Tiktok-hero{   
     margin: 10rem 0;
 }
 .Hero-h2{
     color: var(--rojo);
-    font-size: 8rem;
+    font-size: 7rem;
     line-height: 6rem;
     font-family: 'Racing Sans One', cursive;
 }
 .Hero-p{
     padding: 4rem 0 0 0;
-    font-weight: 600;
-    font-size: 1.5rem;
-    max-width: 55%;
+    font-size: 1rem;
+    max-width: 50%;
 }
 
-/*GRID EXPLICANDO EL PROYECTO*/
-.Seo-grid{
-    display: grid;
-    grid-template-columns: repeat( 2 , 1fr);
-    grid-template-rows: repeat( 2 , 1fr);
+/*GALERIA DE FOTOS*/
 
-    margin: auto;
-    padding: 6rem 0;
-    gap: 1rem;
+.Tiktok-galery{
+  display: grid;
+
+  grid-template-columns: repeat( 3 , 1fr);
+  grid-template-rows: repeat( 2 , 1fr );
+
+  gap: 2rem;
+  max-width: 130rem;
 }
 
-.Seo-click{
-  width: 100%;
+.Tiktok-post{
+  max-width: 30rem;
+  margin: auto; /*para centrar las fotos en la grid*/
 }
-
-.Click-img{
-  object-fit: contain ;
-  width: 6.25rem;
-  animation: clickrotate 5s linear infinite 2s;
-
-  position: absolute;
-  top: -1.875rem;
-  right: 0;
-
-  z-index: 1; /*para que la imagen este por encima del articulo*/
-}
-
-.Seo-selectra{}
-.Selectra-h2{
-    font-size: 2rem;
-    font-family: 'Racing Sans One', cursive;
-}
-.Selectra-p{
-    padding: 1rem 0;
-    max-width: 30rem;
-}
-.Selectra-btn{
-  border: solid var(--rojo) .125rem;
-  color: var(--rojo);
-
-  border-radius: 2rem;
-  min-width: 6rem; /*para que tengan el mismo ancho*/
-  text-align: center;
-  font-weight: 600;
-
-  padding: .5rem 1rem;
-  margin-top: 2rem;
-}
-.Selectra-btn:hover{
-  background-color: var(--rojo);
-  color: var(--rosa);
-  transition: all .5s ease;
-}
-
-.Selectra-btn:active{
-transform: scale(0.8);
-transition: all .5s ease;
-}
-
-.Seo-foto{
-position: relative;
-max-width: 31.25rem; /*para la imagen del click que está en absolut no salga fuera*/
-
-}
-.Seo-img{
-    width: 31.25rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    cursor: pointer;
-
-}
-.Seo-img:hover{
-  border: .125rem solid var(--rojo);
-}
-.Seo-img:active{
-  border: .125rem solid var(--rosa);
-}
-
-.Seo-spiritu{
-    padding-top: 2rem;
-}
-.Spiritu-h2{
-    font-size: 2rem;
-    font-family: 'Racing Sans One', cursive;
-}
-.Spiritu-p{
-    padding: 1rem 0;
-    max-width: 30rem;
-}
-.Spiritu-p a{ /*para dar color al enlace dentro de la clase Spiritu-p*/
-  color: var(--rojo)
-}
-
-.Spiritu-btn{
-  border: solid var(--rojo) .125rem;
-  color: var(--rojo);
-
-  border-radius: 2rem;
-  min-width: 6rem; /*para que tengan el mismo ancho*/
-  text-align: center;
-  font-weight: 600;
-
-  padding: .5rem 1rem;
-  margin-top: 2rem;
-}
-.Spiritu-btn:hover{
-  background-color: var(--rojo);
-  color: var(--rosa);
-  transition: all .5s ease;
-}
-
-.Spiritu-btn:active{
-transform: scale(0.8);
-transition: all .5s ease;
-}
-.spiritu{ /*para que el padding solo afecte al segundo .Seo-foto*/
-    padding-top: 2rem;
-}
-
-
-.Lightbox{
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--escuro);
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-
-    position: fixed;
-    top:0;
-    left:0;
-
-    gap: 2rem;
-    padding: 2rem 0;
-
-    opacity: 0; /*para cuando el lightbox esta inactivo no aparezca*/
-    pointer-events: none; /*la opacidad no elimina el elemento, por eso seguiria siendo clicável*/
-
-    z-index: 2; /*para que el .click-img no aparezca*/
-}
-
-.Lightbox.isActive{
-    opacity: 1;
-    pointer-events: auto;
-}
-.Lightbox-img{
-    width: 45rem;
-    object-fit: contain; /*para que la imagen no deforme y ocupe todo el espacio*/
-}
-.Lightbox-btn{
-    color: var(--rosa);
-    font-family: 'Racing Sans One', cursive;
-    font-size: 1.5rem;
-    text-align: center;
-  
-    background-color: var(--rojo);
-    padding: .3rem 1rem;
-    border-radius: 2rem;
-    margin-left: 1rem;
-    cursor:pointer ;
-}
-.Lightbox-btn:hover{
-    background-color: var(--rosa);
-    color: var(--rojo);
-    transition: all .5s ease;
-}
-.Lightbox-btn:active{
-  transform: scale(0.8);
-  transition: all .5s ease;
+.Post-img{
+  border-radius: 1rem;
 }
 
 
 
 
 /*NAV PROYECTOS SEGUIENTES*/
-.Work-menu{}
+.Work-menu{
+  margin-top: 6rem;
+}
 .Work-title{
   font-size: 1.5rem;
   font-weight: 600;
@@ -531,13 +383,6 @@ transition: all .5s ease;
 
 
 
-/*---------KEYFRAMES--------*/
-
-@keyframes clickrotate{
-
-  50% {transform: rotate(-45deg); /* clickrotate es una animación para girar un elemento -45 grados cuando alcanza el 50% de su duración de la animación.*/
-  }
-}
 
 
 
@@ -545,28 +390,29 @@ transition: all .5s ease;
   /*-------RESPOSIVE-------*/
 
 
+  
+  @media screen and (max-width:1300px){
+    
+    .Tiktok-galery{
+      display: grid;
+    
+      grid-template-columns: repeat( 2 , 1fr );
+      grid-template-rows: repeat( 3 , 1fr );
+    }  
+  }
+
   @media screen and (max-width:1024px){
     .Header-ul{
       font-size: 1rem;
       gap: 1rem;
     } 
   
+    .Hero-h2{
+      font-size: 7rem;
+    }
     .Hero-p{
      max-width: 70%;
     }
-
-    .Seo-grid{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat( 4 , 1fr);
-
-      max-height: 350vh; /*para controlar los espacios entre los divs de la grid*/
-  }
-
-  .Click-img{
-    left: 0;
-    top: -1.5rem;
-  }
   
     .Footer-container{
       display:flex;
@@ -588,9 +434,16 @@ transition: all .5s ease;
   @media screen and (max-width:960px){
     
     .Hero-h2{
-      font-size: 13vw; /*para que el texto de adapte al ancho del dispositivo. No es usado antes porque seria muy grande*/
+      font-size: 12vw; /*para que el texto de adapte al ancho del dispositivo. No es usado antes porque seria muy grande*/
       line-height: 5rem;
   }
+  .Tiktok-galery{
+    display: grid;
+  
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat( 6 , 1fr );
+  
+  }  
     .Work-ul{
     display:flex;
     flex-flow: column wrap;
@@ -599,17 +452,10 @@ transition: all .5s ease;
 
     gap:1rem;
   }
-  }  
+  }
+  
   
     
-  @media screen and (max-width:600px){
-    .Seo-grid{
-      max-height: 340vh; /*para controlar los espacios entre los divs de la grid*/
-  }
-  }
-
-
-
   @media screen and (max-width:480px){
   
     .Header-svg{  /*Para hacer el menu responsive, el svg de hamburguesa cambia de display none a block*/
@@ -630,11 +476,8 @@ transition: all .5s ease;
     
         gap: 1rem;
     }
-    .Seo-grid{
-      max-height: 300vh; /*para controlar los espacios entre los divs de la grid*/
-  }
-  }
 
+    }
   
   
       
