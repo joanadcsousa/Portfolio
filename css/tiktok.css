@@ -56,12 +56,12 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--rosa);
+  color: var(--escuro);
 }
 ::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--rosa);
+  color: var(--escuro);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -116,8 +116,27 @@ body {
 
   color: var(--escuro);
   background-color: var(--claro);
-
 }
+/*Configurar Scrollbar*/
+/* ancho */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+/* fondo */
+::-webkit-scrollbar-track {
+  background: var(--claro); 
+  border-radius: 2rem;
+}
+/* barra */
+::-webkit-scrollbar-thumb {
+  background: var(--rojo); 
+  border-radius: 2rem;
+}
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rosa);
+}
+
 
 
 

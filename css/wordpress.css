@@ -56,12 +56,12 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--rosa);
+  color: var(--escuro);
 }
 ::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--rosa);
+  color: var(--escuro);
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -105,9 +105,8 @@ body {
   font-family: 'Racing Sans One', cursive;
   font-family: 'Montserrat', sans-serif;
   /* opcional */
-  
-  /* opcional */
-  font-smooth: always;
+ 
+
   /* opcional */
   -webkit-font-smoothing: antialiased;
   /* opcional */
@@ -118,8 +117,25 @@ body {
 
 }
 
-
-
+/*Configurar Scrollbar*/
+/* ancho */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+/* fondo */
+::-webkit-scrollbar-track {
+  background: var(--claro); 
+  border-radius: 2rem;
+}
+/* barra */
+::-webkit-scrollbar-thumb {
+  background: var(--rojo); 
+  border-radius: 2rem;
+}
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rosa);
+}
 
 
 
@@ -137,7 +153,7 @@ body {
 
 
 
-/*HEADER*/
+/*.....HEADER....*/
 .Header{
     width: 100%;
 
@@ -153,29 +169,27 @@ body {
     margin: auto; /*para que el bloque este centrado*/
 
     padding: 1rem;
- 
-
 }
 
-.Header-logo{}
 
-/*NAV*/
-.Header-nav{}
+/*.....NAV.......*/
+
 .Header-ul{
   width: 100%;
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  
+  gap: 2rem;
+}/*Establece el ancho al 100 % y usa las propiedades de Flexbox para alinear horizontalmente los elementos de la lista a la derecha y centrarlos verticalmente. Distancia de 2rem entre <li>*/
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-
-    gap: 2rem;
-}
 .Header-a{
     border: solid var(--rojo) .125rem;
 
     border-radius: 2rem;
-    min-width: 6rem; /*para que tengan el mismo ancho*/
+    min-width: 6rem; /*para que todos los botones tengan el mismo ancho*/
     text-align: center;
 
     padding: .5rem 1rem;
@@ -187,7 +201,7 @@ body {
     background-color: var(--rojo);
     color: var(--rosa);
     transition: all .5s ease;
-}
+}/*Al hacer hover en el botón cambia el color de fondo y del texto con una transición. A continuación, al hacer clic (active) tiene una escala.*/
 
 .Header-a:active{
   transform: scale(0.8);
@@ -195,19 +209,20 @@ body {
 }
 .Header-svg{
   display: none;
-}
+}/*oculta el SVG menu hamburguesa de la página web, hasta que tenga las dimensiones de móvil donde en responsive volverá a display block.*/
+
 
 
 /*MAIN*/
-.Main{}
 .Wordpress{
     margin: 6rem 0;
     background-color: var(--claro);
     width: 100%;
 }
 .Wordpress-wrapper{
-    width: 80%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
+  max-width: 150rem; /*para que el contenido no se desformate y tenga un ancho máximo.*/
 }
 .Wordpress-hero{
     margin: 10rem 0;
@@ -227,8 +242,32 @@ body {
     max-width: 50%;
 }
 
+.Hero-a{
+  border: solid var(--rojo) .125rem;
+  color: var(--rojo);
+
+  border-radius: 2rem;
+  width: 8rem;
+  text-align: center;
+  font-weight: 600;
+
+  padding: .5rem 1rem;
+  margin-top: 2rem;
+}
+.Hero-a:hover{
+  background-color: var(--rojo);
+  color: var(--rosa);
+  transition: all .5s ease;
+}
+
+.Hero-a:active{
+transform: scale(0.8);
+transition: all .5s ease;
+}
+
 
 .Wordpress-grid{
+/*Grid con 2 columnas y 3 filas, constituidas por fracciones. Espacio de 2rem entre los elementos.*/
     display: grid;
     grid-template-columns: repeat( 2 , 1fr );
     grid-template-rows: repeat( 3 , 1fr ) ;
@@ -252,16 +291,13 @@ body {
     padding: .5rem 0;
 }
 
-.Moodboard{}
 
 .Moodboard-img{
     width: 100%;
 
-    object-fit: contain;  /*propiedad para especificar cómo se debe cambiar el tamaño de la imagen para que se ajuste a las dimensiones del elemento. La imagen se escalará para ajustarse a las
-    dimensiones del elemento y cualquier espacio sobrante se rellenará con píxeles transparentes.*/
+    object-fit: contain;  /*propiedad para especificar cómo se debe cambiar el tamaño de la imagen para que se ajuste a las dimensiones del elemento. Se ajusta proporcionalmente a las dimensiones del elemento y cualquier espacio sobrante se rellenará con píxeles transparentes.*/
 }
 
-.Competitive{}
 .Competitive-img{
     width: 100%;
     object-fit: contain;
@@ -343,7 +379,6 @@ body {
 
 
 /*NAV PROYECTOS SEGUIENTES*/
-.Work-menu{}
 .Work-title{
   font-size: 1.5rem;
   font-weight: 600;
@@ -359,7 +394,7 @@ body {
     max-width: 50rem;
     margin: auto;
 }
-.Work-li{}
+
 .Work-a{
   text-align: center;
   font-weight: 600;
@@ -386,7 +421,7 @@ body {
 
 
 
-/*FOOTER*/
+/*...FOOTER...*/
 .Footer{
     width: 100%;
   }
@@ -470,7 +505,7 @@ body {
 
 
 
-  /*-------RESPOSIVE-------*/
+  /*.......RESPOSIVE.......*/
 
 
 @media screen and (max-width:1024px){
@@ -491,7 +526,7 @@ body {
     grid-template-rows: repeat( 6 , 1fr );
 
     padding: 2rem 0;
-    max-height: 325vh; /*Para controlar la distancia entre los divs de la grid*/
+    max-height: 325vh; /*Para controlar la distancia vertical entre los divs de la grid*/
     gap: 1rem;
 
 }
@@ -557,7 +592,6 @@ body {
   }
  
 }
-
 
 
   

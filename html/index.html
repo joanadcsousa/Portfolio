@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="icon" type="icon/png" href="../assets/img/favicon1.png">
+
     <link rel="stylesheet" href="../css/index.css">
     <script src="../js/index.js" defer></script>
 
@@ -15,9 +17,10 @@
 
     <title>Home</title>
 </head>
-<body>
 
+<body>
     <!--HEADER-->
+
     <header class="Header" id="Home">
         <div class="Header-wrapper"><!--Wrapper sirve para centrar el contenido con el margin: auto, se repite al largo de la web-->
 
@@ -25,7 +28,7 @@
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
               </svg>
               
-            <nav class="Header-nav">
+            <nav class="Header-nav"><!--MENU DE NAVEGACIÓN-->
                 <ul class="Header-ul">
                     <li><a class="Header-a" href="#Home">Home</a></li>
                     <li><a class="Header-a" href="#Work">Work</a></li>
@@ -41,12 +44,12 @@
 <!--MAIN-->
     <main class="Main">
 
-    <!--HERO-->
 
+    <!--..HERO..-->
     <div class="Hero">
         
         <div class="Hero-fondo">
-        <section class="Hero-wrapper">
+        <section class="Hero-wrapper"> <!--WRAPPER:  Como algunas secciónes tienen un ancho de 100%, cada sección de la web tendrá su propio wrapper.-->
 
         <div class="Hero-container">
             <h1 class="Hero-h1">Get the creative juices flowing</h1>
@@ -60,9 +63,7 @@
     </div>
     
 
-
-<!--PROYECTOS-->
-
+<!--....WORK/PROYECTOS......-->
 
     <div id="Work">
         
@@ -70,54 +71,60 @@
                 <h2 class="Work-h2">Work</h2>  
             </section>
 
-        <div class="Work-wrapper">    
+        <div class="Work-wrapper">  
 
         <div class="Work-contenedor">
                 
-            <div class="Work-menu">
+            <div class="Work-menu"><!--MENU PROYECTOS-->
                 <ul class="Work-ul">
                     <li><a class="Work-a" href="#webdesign">Wordpress Blog</a></li>
                     <li><a class="Work-a" href="#seo">SEO</a></li>
                     <li><a class="Work-a" href="#instagram">Instagram posts</a></li>
                     <li><a class="Work-a" href="#tiktok"> Tiktok posts</a></li>
-                    
                 </ul>
             </div>
 
             <div class="Work-fotos">
 
+                <!--IMAGEN CLICK ROTANDO-->
                 <div class="Work-click">
                     <img class="Click-img" src="../assets/img/click.png" alt="click">
                 </div>
 
+                <!--IMAGEN WORDPRESS-->
                 <ul class="Fotos-ul">
                 <li class="Fotos-li">
                     <a class="Fotos-a" href="../html/wordpress.html">
                         <img class="Work-img" id="webdesign" src="../assets/img/Blogbranco.png" alt="fotowebdesign" loading="lazy">
+                        
                         <img class="Work-img opacity" src="../assets/img/Bloglaranja.png" alt="fotowebdesign" loading="lazy">
-                    </a>
+                    </a><!--La imagen solo se cargará cuando esté en la ventana gráfica, no comprometendo los tiempos de carga de la web-->
                 </li>
 
-
+                <!--IMAGEN SEO-->
                 <li class="Fotos-li">
                     <a class="Fotos-a" href="../html/seo.html">
-                        <img class="Work-img" id="seo" src="../assets/img/mockups.jpg" alt="fototiktoks" loading="lazy">
-                        <img class="Work-img opacity" src="../assets/img/mockup1.jpg" alt="fototiktoks" loading="lazy"> 
+                        <img class="Work-img" id="seo" src="../assets/img/mockups.jpg" alt="fotoseo" loading="lazy">
+                        <img class="Work-img opacity" src="../assets/img/mockup1.jpg" alt="fotoseo" loading="lazy"> 
                     </a>
                 </li>
+
+                <!--IMAGEN WORDPRESS-->               
                 <li class="Fotos-li">
                     <a class="Fotos-a" href="../html/instagram.html">
                         <img class="Work-img" id="instagram" src="../assets/img/insta-06.png" alt="fotoinstagram " loading="lazy">
                         <img class="Work-img opacity" src="../assets/img/insta-01.png" alt="fotoinstagram" loading="lazy">
                     </a>
                 </li>
+            
+                <!--IMAGEN TIKTOK-->
                 <li class="Fotos-li">
-                    <a class="Fotos-a" href="">
+                    <a class="Fotos-a" href="../html/tiktok.html">
                         <img class="Work-img" id="tiktok" src="../assets/img/Tiktokrosa.png" alt="fototiktoks" loading="lazy"> 
                         <img class="Work-img opacity" src="../assets/img/Tiktokbranco.png" alt="fototiktoks" loading="lazy">
                     </a>
-                    </li>
-                <div class="Fotos-cursor"></div> <!--Para cambiar el cursor al hacer hover en las fotos-->
+                </li>
+
                 </ul>
    
             </div>    
@@ -126,8 +133,8 @@
         </div>
 
 
- <!--About-->
-        <div id="About">
+ <!--.......ABOUT.......-->
+    <div id="About">
 
             <section class="About-title">
                 <h2 class="About-h2">About</h2>
@@ -144,15 +151,16 @@
                 <div class="About-texto">
                     <p class="About-p">This is Joana, a portuguese marketer. Graduated in marketing in Oporto, did an internship in ANCA Design Studio, and then wanted something new, so moved to Madrid to work as a SEO Content Editor. Once here, she continued to study, in the Máster Diseño web y Marketing digital in CEI Escuela de Diseño y Marketing. She is loving the big city, but also misses nature and her cats.</p>
                 </div> 
-                </div>
+            </div>
 
                 
-<!--Section de los buttons de la experiencia de trabajo y de las skills-->
 
 <div class="About-lists">
 
 <div class="About-tabs left">
+<!--Section de los buttons de la experiencia de trabajo y studies-->
 
+<!--EXPERIENCE-->
         <section class="About-experience">
             <h3 class="Experience-h3">Experience</h3>
         
@@ -181,6 +189,7 @@
          </div>
         </section>
 
+<!--STUDIES-->
         <section class="About-studies">
             <h3 class="Studies-h3">Studies</h3>
         
@@ -206,7 +215,7 @@
             </div>
         </section>
 
-
+<!--SKILLS-->
          <section class="About-skills">
             <h3 class="Skills-h3">Skills</h3>
         
@@ -235,8 +244,10 @@
     </div>
 
 
-<div class="About-tabs right">
+<div class="About-tabs right"> 
+<!--Div derecho con idiomas y CVs-->
 
+<!--LANGUAGE-->
         <section class="About-language">
             <h3 class="Language-h3">Languages</h3>
 
@@ -247,7 +258,7 @@
             </ul>
         </section>
 
-
+<!--CV-->
         <section class="About-curriculo">
             <h3 class="Curriculo-h3">CVs</h3>
                 <div class="Curriculo-btn">
@@ -257,22 +268,19 @@
             </section>
 </div>
 </div>
-
-
-
-    
-
-        </div>
-        </div>
+</div>
+</div>
 
         
 
-    <!--CONTACT FORM-->
+    <!--CONTACT FORMULARIO-->
 
     <div id="Contact">
         <div class="Contact-wrapper">
 
             <div class="Contact-container">
+            <!--Div con H2 y formulario-->
+
 
                 <section class="Contact-title">
                     <h2 class="Contact-h2">Wanna know more<br>about me??</h2>
@@ -281,13 +289,15 @@
                 <div class="Contact-form">
                     <form action="archivo.php" method="post">
                         <input type="email" class="Form-email" placeholder="E-mail">
-                        <textarea name="Message" class="Form-text" placeholder="Message" id="" cols="20" rows="3"></textarea>
+                        <textarea name="Message" class="Form-text" placeholder="Message" id="Message" cols="20" rows="3"></textarea>
                     </form>
                     <svg class="Contact-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                       </svg>
                 </div>
             </div>
+
+            <!--Botón con email-->
 
             <a class="Contact-a" href="mailto:joana.sousa234@hotmail.com"> or here: joana.sousa234@hotmail.com</a>
         </div>
@@ -296,10 +306,11 @@
 </main>
 
 
-    <!--FOOTER-->
+    <!--......FOOTER.......-->
 
     <footer class="Footer">
         <div class="Footer-container">
+
             <div class="Footer-social">
                 <ul class="Social-ul">
                     <li class="Social-li"><a href="https://www.behance.net/joanasousa_marketing" target="_blank">Behance</a></li>
